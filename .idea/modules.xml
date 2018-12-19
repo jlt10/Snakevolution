@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Snakevolution.iml" filepath="$PROJECT_DIR$/Snakevolution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Snakevolution_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Snakevolution_main.iml" group="Snakevolution" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Snakevolution_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Snakevolution_test.iml" group="Snakevolution" />
     </modules>
   </component>
 </project>

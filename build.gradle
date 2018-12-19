@@ -1,0 +1,182 @@
+buildscript {
+    repositories {
+        jcenter()
+
+        mavenCentral()
+
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+
+    configurations.maybeCreate("pitest")
+
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.3.0' // see "pitest" section below
+        pitest 'org.pitest:pitest-junit5-plugin:0.3'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+    id 'checkstyle'
+    id 'jacoco'
+    id 'info.solidsoft.pitest' version '1.3.0'
+    id 'net.ltgt.errorprone' version '0.0.14' // for JDK9+ https://github.com/tbroyer/gradle-errorprone-javacplugin-plugin
+}
+
+group 'winter'
+version '1.0'
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+idea {
+    project {
+        jdkName = '1.8'
+        languageLevel = '1.8'
+    }
+}
+
+checkstyle {
+    toolVersion = '8.12'
+    maxWarnings = 0
+    maxErrors = 0
+}
+
+compileJava {
+    options.fork = true
+    options.incremental = true
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Xlint:-processing" << "-Werror"
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// we want to print the date and other useful stuff every time we compile; helpful when looking at logs
+import java.time.format.DateTimeFormatter
+import java.time.ZoneId
+import java.time.ZonedDateTime
+
+task printStuff () {
+    // Prints Chicago timezone
+
+    println "Compilation time: " +
+            ZonedDateTime.now(ZoneId.of("America/Chicago")).format(DateTimeFormatter.RFC_1123_DATE_TIME)
+
+    // And, while we're here, we might as well print out the Java version
+    println "Gradle JDK: " + System.getProperty("java.version")
+
+    // Print everything Gradle knows about itself
+    println "Gradle version: " + GradleVersion.current()
+}
+tasks.compileJava.dependsOn printStuff
+
+////////////////////////////////////////////////////////////////////////////////
+// These are gradle actions that lets us launch a JVM for our various different "main" methods.
+// https://docs.gradle.org/current/javadoc/org/gradle/api/tasks/JavaExec.html
+
+// Note that these actions, when run from the command-line, they all seem to do the right thing, and you can kill
+// off your server by typing Control-C. If you run them from IntelliJ, you'll have to hit the red stop-button.
+
+// Launching a Java command with all the right classpath and library arguments is a pain, so it's nice that Gradle
+// will do all the work for us. Also, by saying that these tasks "depend on the classes", that means that Gradle
+// will make sure to recompile anything, if necessary, before going on and starting the Java program.
+
+// TODO: Make one of these for our snake project!
+//task runHangman (dependsOn: classes, type: JavaExec) {
+//    classpath = sourceSets.main.runtimeClasspath
+//    main = "edu.rice.week1hangman.Hangman"
+//    standardInput = System.in
+//
+//    maxHeapSize = "4g"
+//}
+
+////////////////////////////////////////////////////////////////////////////////
+// This section configures "pitest", a fancy "mutation analysis" engine
+// that changes your program hundreds of different ways, under the theory that
+// a "good" unit test will fail if your program has a bug in it. http://pitest.org/
+
+pitest {
+    // We're on the cutting edge here of integrating junit5 with pitest; the plugin we're using
+    // only came out in December 2017, so there may be issues. https://github.com/hcoles/pitest/issues/284
+    testPlugin = 'junit5'
+
+//    // here, we're just focusing on the JSON classes; running pitest on the whole codebase takes forever
+//    targetClasses = ['edu.rice.json.*']
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// This section configures JaCoCo (Java Code Coverage). For some assignments, we'll have minimum code
+// coverage requirements. JaCoCo can enforce this as part of 'gradle check'.
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        csv.enabled = false
+        html.destination file("${buildDir}/reports/jacoco/")
+    }
+}
+
+test {
+    useJUnitPlatform() // necessary to activate Gradle's JUnit5 support
+    outputs.upToDateWhen { false }
+
+    jacoco {
+        append = false
+    }
+
+    minHeapSize = "512m"
+    maxHeapSize = "2048m"
+    jvmArgs = ["-Xss128m"] // bigger stack as well
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// This section specifies all the external libraries being used by your Java
+// program and where to find them.
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    shadow
+}
+
+dependencies {
+    // What i'm used to
+    errorprone 'com.google.errorprone:error_prone_core:2.3.2'
+
+    compile('com.sparkjava:spark-core:2.7.2') { // web servers
+        exclude module: 'slf4j-simple' // because we're using logback instead
+    }
+    compile 'ch.qos.logback:logback-classic:1.2.3' // logging
+    compile 'com.j2html:j2html:1.0.0' // fluent HTML building
+    compile 'org.unbescape:unbescape:1.1.5.RELEASE' // string escapes for JSON, Java, etc.
+
+    compile 'commons-io:commons-io:2.6' // utilities to help with IO
+    compile 'com.beust:jcommander:1.72' // command-line parsing
+
+    // annotations to help ErrorProne and IntelliJ find bugs
+    compile 'org.jetbrains:annotations:15.0'
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile 'com.google.code.findbugs:annotations:3.0.1'
+    compile 'com.google.errorprone:error_prone_annotations:2.3.2'
+
+    // testing libraries: these are only visible from our "test" code, not the "main" code
+    testCompile 'org.mockito:mockito-core:2.19.0' // mock testing library
+    testCompile 'org.quicktheories:quicktheories:0.25' // high-tech pattern-based testing library
+
+    // JUnit5 support
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+}
