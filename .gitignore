@@ -1,3 +1,6 @@
 .DS_Store
 out/
 *.class
+src/main/java/snake/winter/playground/*
+src/test/java/snake/winter/playground/*
+config/*

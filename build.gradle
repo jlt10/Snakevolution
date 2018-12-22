@@ -30,7 +30,7 @@ plugins {
     id 'net.ltgt.errorprone' version '0.0.14' // for JDK9+ https://github.com/tbroyer/gradle-errorprone-javacplugin-plugin
 }
 
-group 'winter'
+group 'snake.winter'
 version '1.0'
 
 allprojects {
@@ -172,7 +172,13 @@ dependencies {
     compile 'com.google.code.findbugs:annotations:3.0.1'
     compile 'com.google.errorprone:error_prone_annotations:2.3.2'
 
-    // testing libraries: these are only visible from our "test" code, not the "main" code
+    // OFP, take two (no training wheels)
+    compile "io.vavr:vavr:0.9.2"
+
+    // To work with JSON
+    compile "org.json:json:20180813"
+
+    // testing libraries
     testCompile 'org.mockito:mockito-core:2.19.0' // mock testing library
     testCompile 'org.quicktheories:quicktheories:0.25' // high-tech pattern-based testing library
 
