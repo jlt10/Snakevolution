@@ -17,6 +17,20 @@ public class Point {
     Direction(Point d) {
       this.dir = d;
     }
+
+    public static Direction complement(Direction d) {
+      switch(d) {
+        case NORTH:
+          return SOUTH;
+        case EAST:
+          return WEST;
+        case WEST:
+          return EAST;
+        case SOUTH:
+          return NORTH;
+      }
+      throw new RuntimeException("invalid direction");
+    }
   }
 
   // External classes shouldn't use this constructor.
@@ -47,7 +61,7 @@ public class Point {
 
   @Override
   public String toString() {
-    return "Point(" + x + ", " + y + ")";
+    return "p(" + x + ", " + y + ")";
   }
 
   @Override

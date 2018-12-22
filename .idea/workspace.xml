@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0763fb46-57ba-4953-8e95-7d75af4ef2e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -90,7 +91,7 @@
           <entry key="gradle" value="3" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="18" />
+          <entry key="java" value="23" />
           <entry key="md" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -100,7 +101,7 @@
           <entry key="Groovy" value="3" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="23" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="2" />
@@ -110,18 +111,18 @@
         <counts>
           <entry key="gitignore" value="97" />
           <entry key="gradle" value="327" />
-          <entry key="java" value="3267" />
+          <entry key="java" value="6104" />
           <entry key="md" value="2" />
-          <entry key="txt" value="88" />
+          <entry key="txt" value="114" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="327" />
-          <entry key="JAVA" value="3267" />
+          <entry key="JAVA" value="6104" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="185" />
+          <entry key="PLAIN_TEXT" value="211" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -129,27 +130,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2640">
-              <caret line="178" column="35" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -162,11 +142,36 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/playground/PlaygroundTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#260#269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="122">
+              <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
               <folding>
                 <element signature="e#223#224#0" expanded="true" />
                 <element signature="e#247#248#0" expanded="true" />
@@ -191,11 +196,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+            <state relative-caret-position="-208">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#443#444#0" expanded="true" />
@@ -206,14 +211,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.quicktheories/quicktheories/0.25/e323bd66ef15f57993866897df735a67a25ccec2/quicktheories-0.25-sources.jar!/org/quicktheories/generators/SourceDSL.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="167">
+              <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
               <folding>
-                <element signature="e#171#172#0" expanded="true" />
-                <element signature="e#205#206#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#1503#1504#0" expanded="true" />
+                <element signature="e#1588#1589#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.2/6f541fd0ff058edbce64a5122d29a0a9136fc6b5/vavr-0.9.2-sources.jar!/io/vavr/collection/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="444" column="27" selection-start-line="444" selection-start-column="27" selection-end-line="444" selection-end-column="27" />
+              <folding>
+                <element signature="e#15205#15206#0" expanded="true" />
+                <element signature="e#15268#15269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.2/6f541fd0ff058edbce64a5122d29a0a9136fc6b5/vavr-0.9.2-sources.jar!/io/vavr/collection/Iterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -232,27 +272,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1234">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/playground/PlaygroundTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -616,17 +635,18 @@
         <option value="$PROJECT_DIR$/src/test/java/winter/playground/PlaygroundTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java" />
+        <option value="$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/snake/winter/playground/PlaygroundTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" />
-        <option value="$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" />
+        <option value="$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -670,17 +690,6 @@
               <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
               <item name="Snakevolution" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snakevolution" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snakevolution" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="checkstyle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
@@ -758,6 +767,15 @@
             </path>
             <path>
               <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Snakevolution" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="winter" type="462c0819:PsiDirectoryNode" />
+              <item name="playground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Snakevolution" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -768,7 +786,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545463551066" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545468494266" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/checkstyle/checkstyle.xml" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -797,9 +815,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PointTest">
+  <component name="RunManager" selected="Application.Playground">
+    <configuration name="Playground" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="snake.winter.playground.Playground" />
+      <module name="Snakevolution_main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="snake.winter.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaygroundTest.listTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Snakevolution_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="snake.winter.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="snake.winter.playground" />
+      <option name="MAIN_CLASS_NAME" value="snake.winter.playground.PlaygroundTest" />
+      <option name="METHOD_NAME" value="listTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -814,40 +863,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="snake.winter.game" />
       <option name="MAIN_CLASS_NAME" value="snake.winter.game.PointTest" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PointTest.addTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Snakevolution_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="snake.winter.game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="snake.winter.game" />
-      <option name="MAIN_CLASS_NAME" value="snake.winter.game.PointTest" />
-      <option name="METHOD_NAME" value="addTests" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PointTest.commutativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Snakevolution_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="snake.winter.game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="snake.winter.game" />
-      <option name="MAIN_CLASS_NAME" value="snake.winter.game.PointTest" />
-      <option name="METHOD_NAME" value="commutativeTest" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -902,19 +917,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PointTest.commutativeTest" />
-      <item itemvalue="JUnit.PointTest.addTests" />
       <item itemvalue="JUnit.PointTest.enumTest" />
       <item itemvalue="JUnit.PointTest.directionTests" />
       <item itemvalue="JUnit.PointTest" />
+      <item itemvalue="JUnit.PlaygroundTest.listTest" />
+      <item itemvalue="Application.Playground" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Playground" />
+        <item itemvalue="JUnit.PlaygroundTest.listTest" />
         <item itemvalue="JUnit.PointTest" />
         <item itemvalue="JUnit.PointTest.directionTests" />
         <item itemvalue="JUnit.PointTest.enumTest" />
-        <item itemvalue="JUnit.PointTest.addTests" />
-        <item itemvalue="JUnit.PointTest.commutativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -943,19 +958,17 @@
       <option name="project" value="LOCAL" />
       <updated>1545460099997</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add point class and tests">
+      <created>1545463693897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545463693897</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Snakevolution_[check] - 2018.12.19 at 16h 37m 15s.xml">
-      <configuration name="Snakevolution [check]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Snakevolution_[check] - 2018.12.19 at 23h 37m 00s.xml">
-      <configuration name="Snakevolution [check]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="Snakevolution_[check] - 2018.12.19 at 23h 49m 09s.xml">
-      <configuration name="Snakevolution [check]" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="Snakevolution_[check] - 2018.12.19 at 23h 50m 54s.xml">
       <configuration name="Snakevolution [check]" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -976,6 +989,15 @@
     </history-entry>
     <history-entry file="PointTest - 2018.12.22 at 01h 24m 37s.xml">
       <configuration name="PointTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PointTest - 2018.12.22 at 01h 25m 38s.xml">
+      <configuration name="PointTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaygroundTest_listTest - 2018.12.22 at 01h 52m 18s.xml">
+      <configuration name="PlaygroundTest.listTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaygroundTest_listTest - 2018.12.22 at 01h 53m 47s.xml">
+      <configuration name="PlaygroundTest.listTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1001,7 +1023,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32972974" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.33032492" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32851985" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32740214" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Gradle" order="1" weight="0.32715008" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1021,7 +1043,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Set up gradle and checkstyle" />
     <MESSAGE value="Set up module structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up module structure" />
+    <MESSAGE value="Add point class and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add point class and tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.gradle" />
@@ -1077,40 +1100,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/playground/PlaygroundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -1139,10 +1132,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.2/6f541fd0ff058edbce64a5122d29a0a9136fc6b5/vavr-0.9.2-sources.jar!/io/vavr/collection/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="444" column="27" selection-start-line="444" selection-start-column="27" selection-end-line="444" selection-end-column="27" />
+          <folding>
+            <element signature="e#15205#15206#0" expanded="true" />
+            <element signature="e#15268#15269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.2/6f541fd0ff058edbce64a5122d29a0a9136fc6b5/vavr-0.9.2-sources.jar!/io/vavr/collection/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/playground/PlaygroundTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        <state relative-caret-position="122">
+          <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
           <folding>
             <element signature="e#223#224#0" expanded="true" />
             <element signature="e#247#248#0" expanded="true" />
@@ -1168,12 +1200,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+        <state relative-caret-position="-208">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
             <element signature="e#509#510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
