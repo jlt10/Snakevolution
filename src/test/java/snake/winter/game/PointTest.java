@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.quicktheories.core.Gen;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.quicktheories.QuickTheory.qt;
 import static org.quicktheories.generators.SourceDSL.integers;
 import static snake.winter.game.Point.Direction.*;
@@ -38,5 +39,12 @@ public class PointTest {
           assertEquals(p, p.add(NORTH).add(SOUTH));
           assertEquals(p, p.add(WEST).add(EAST));
         });
+
+    Point p = point(2,3);
+    assertEquals(NORTH, p.directionTo(point(2,2)).get());
+    assertEquals(SOUTH, p.directionTo(point(2,4)).get());
+    assertEquals(WEST, p.directionTo(point(1,3)).get());
+    assertEquals(EAST, p.directionTo(point(3,3)).get());
+    assertFalse(p.directionTo(point(5,3)).isDefined());
   }
 }

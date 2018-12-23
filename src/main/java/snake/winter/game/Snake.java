@@ -36,12 +36,18 @@ public class Snake {
     return 1 + tail.length();
   }
 
+  /**
+   * Creates a straight snake facing the given direction with the given length.
+   */
   public static Snake snake(Point head, int length, Direction dir) {
     List<Point> tail = List.range(1, length).take(length)
                            .map(i -> head.add(complement(dir).getDir().mult(i)));
     return new Snake(head, tail, dir);
   }
 
+  /**
+   * Returns a snake with the given head and tail if inputs are valid.
+   */
   public static Option<Snake> snake(Point head, List<Point> tail) {
     return tailHelper(tail) && !tail.contains(head)
                ? tail.get(0).directionTo(head).map(dir -> new Snake(head, tail, dir))
@@ -52,13 +58,16 @@ public class Snake {
     return snake(head, 1, dir);
   }
 
-  public static boolean tailHelper(List<Point> tail) {
-    return (tail.distinct().equals(tail))
+  private static boolean tailHelper(List<Point> tail) {
+    return tail.distinct().equals(tail)
                ? List.range(0, tail.length() - 1)
                      .foldLeft(true, (valid, i) -> valid && tail.get(i).squareDistance(tail.get(i + 1)) == 1)
                : false;
   }
 
+  /**
+   * Moves the snake one step in the given direction.
+   */
   public Option<Snake> step(Direction d) {
     Point newHead = head.add(d);
     return tail.contains(newHead)

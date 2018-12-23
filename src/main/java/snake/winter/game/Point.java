@@ -1,5 +1,6 @@
 package snake.winter.game;
 
+import com.google.errorprone.annotations.Immutable;
 import io.vavr.control.Option;
 
 import java.util.function.BiFunction;
@@ -8,15 +9,16 @@ import java.util.function.Function;
 import static io.vavr.control.Option.none;
 import static io.vavr.control.Option.some;
 
+@Immutable
 public class Point {
-  public int x;
-  public int y;
+  public final int x;
+  public final int y;
 
   public enum Direction {
     NORTH(point(0, -1)), SOUTH(point(0, 1)),
     EAST(point(1, 0)), WEST(point(-1, 0));
 
-    private Point dir;
+    private final Point dir;
 
     public Point getDir() {
       return dir;
@@ -26,20 +28,19 @@ public class Point {
       this.dir = d;
     }
 
+    /**
+     * Returns the complement of the input direction.
+     */
     public static Direction complement(Direction d) {
-      switch (d) {
-        case NORTH:
-          return SOUTH;
-        case EAST:
-          return WEST;
-        case WEST:
-          return EAST;
-        case SOUTH:
-          return NORTH;
-      }
-      throw new RuntimeException("invalid input direction");
+      return fromPoint(d.getDir().mult(-1)).getOrElseThrow(
+          () -> {
+            throw new RuntimeException("invalid input direction");
+          });
     }
 
+    /**
+     * Returns the direction that corresponds to the given point if one exists.
+     */
     public static Option<Direction> fromPoint(Point p) {
       if (p.equals(NORTH.dir)) {
         return some(NORTH);
@@ -87,7 +88,7 @@ public class Point {
     return point(f.apply(x), f.apply(y));
   }
 
-  public int extract(BiFunction<Integer, Integer, Integer> f) {
+  public <T> T extract(BiFunction<Integer, Integer, ? extends T> f) {
     return f.apply(x, y);
   }
 
