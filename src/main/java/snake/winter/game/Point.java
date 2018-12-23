@@ -1,5 +1,13 @@
 package snake.winter.game;
 
+import io.vavr.control.Option;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+import static io.vavr.control.Option.none;
+import static io.vavr.control.Option.some;
+
 public class Point {
   public int x;
   public int y;
@@ -19,7 +27,7 @@ public class Point {
     }
 
     public static Direction complement(Direction d) {
-      switch(d) {
+      switch (d) {
         case NORTH:
           return SOUTH;
         case EAST:
@@ -29,7 +37,23 @@ public class Point {
         case SOUTH:
           return NORTH;
       }
-      throw new RuntimeException("invalid direction");
+      throw new RuntimeException("invalid input direction");
+    }
+
+    public static Option<Direction> fromPoint(Point p) {
+      if (p.equals(NORTH.dir)) {
+        return some(NORTH);
+      }
+      else if (p.equals(SOUTH.dir)) {
+        return some(SOUTH);
+      }
+      else if (p.equals(EAST.dir)) {
+        return some(EAST);
+      }
+      else if (p.equals(WEST.dir)) {
+        return some(WEST);
+      }
+      return none();
     }
   }
 
@@ -57,6 +81,26 @@ public class Point {
 
   public Point mult(int c) {
     return point(x * c, y * c);
+  }
+
+  public Point map(Function<Integer, Integer> f) {
+    return point(f.apply(x), f.apply(y));
+  }
+
+  public int extract(BiFunction<Integer, Integer, Integer> f) {
+    return f.apply(x, y);
+  }
+
+  public double distance(Point p) {
+    return Math.sqrt(Math.pow(x - p.x, 2) + Math.pow(y - p.y, 2));
+  }
+
+  public int squareDistance(Point p) {
+    return add(p.mult(-1)).map(Math::abs).extract((x, y) -> x + y);
+  }
+
+  public Option<Direction> directionTo(Point p) {
+    return Direction.fromPoint(p.add(this.mult(-1)));
   }
 
   @Override

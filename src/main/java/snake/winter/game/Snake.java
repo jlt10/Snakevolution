@@ -42,17 +42,28 @@ public class Snake {
     return new Snake(head, tail, dir);
   }
 
-  public static Option<Snake> snake(Point head, List<Point> tail, Direction dir) {
-    return (tail.distinct().equals(tail) && head.add(complement(dir)).equals(tail.get(0)))
-               ? some(new Snake(head, tail, dir))
+  public static Option<Snake> snake(Point head, List<Point> tail) {
+    return tailHelper(tail) && !tail.contains(head)
+               ? tail.get(0).directionTo(head).map(dir -> new Snake(head, tail, dir))
                : none();
+  }
+
+  public static Snake pointSnake(Point head, Direction dir) {
+    return snake(head, 1, dir);
+  }
+
+  public static boolean tailHelper(List<Point> tail) {
+    return (tail.distinct().equals(tail))
+               ? List.range(0, tail.length() - 1)
+                     .foldLeft(true, (valid, i) -> valid && tail.get(i).squareDistance(tail.get(i + 1)) == 1)
+               : false;
   }
 
   public Option<Snake> step(Direction d) {
     Point newHead = head.add(d);
     return tail.contains(newHead)
                ? none()
-               : snake(newHead, tail.insert(0, head).removeLast(x -> true), d);
+               : snake(newHead, tail.insert(0, head).removeLast(x -> true));
   }
 
   public Option<Snake> step(Direction... dirs) {
@@ -63,9 +74,13 @@ public class Snake {
     return new Snake(head, tail.append(tail.get(tail.length() - 1)), d).step(d);
   }
 
+  public List<Point> toList() {
+    return tail.insert(0, head);
+  }
+
   @Override
   public String toString() {
-    return "Snake( head: " + head + ", tail: " + tail + ")";
+    return "Snake(head: " + head + ", tail: " + tail + ", dir: " + dir + ")";
   }
 
   @Override
