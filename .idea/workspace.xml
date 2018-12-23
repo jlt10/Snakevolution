@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0763fb46-57ba-4953-8e95-7d75af4ef2e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/snake/winter/game/BoardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/snake/winter/game/DisplayTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/snake/winter/game/PointTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/snake/winter/game/SnakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/snake/winter/game/SnakeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -92,7 +92,7 @@
           <entry key="gradle" value="3" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="26" />
+          <entry key="java" value="30" />
           <entry key="md" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -102,7 +102,7 @@
           <entry key="Groovy" value="3" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="26" />
+          <entry key="JAVA" value="30" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="2" />
@@ -112,18 +112,18 @@
         <counts>
           <entry key="gitignore" value="97" />
           <entry key="gradle" value="327" />
-          <entry key="java" value="11300" />
+          <entry key="java" value="12884" />
           <entry key="md" value="2" />
-          <entry key="txt" value="180" />
+          <entry key="txt" value="225" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="327" />
-          <entry key="JAVA" value="11300" />
+          <entry key="JAVA" value="12884" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="277" />
+          <entry key="PLAIN_TEXT" value="322" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -183,10 +183,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="-467">
               <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#1364#1365#0" expanded="true" />
@@ -200,6 +200,91 @@
                 <element signature="e#2664#2665#0" expanded="true" />
                 <element signature="e#2702#2703#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
+                <element signature="e#1042#1043#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1204#1205#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1397#1398#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1557#1558#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#1504#1505#0" expanded="true" />
+                <element signature="e#1524#1525#0" expanded="true" />
+                <element signature="e#1592#1593#0" expanded="true" />
+                <element signature="e#1629#1630#0" expanded="true" />
+                <element signature="e#1675#1676#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#1794#1795#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
+                <element signature="e#1974#1975#0" expanded="true" />
+                <element signature="e#2054#2055#0" expanded="true" />
+                <element signature="e#2069#2070#0" expanded="true" />
+                <element signature="e#2168#2169#0" expanded="true" />
+                <element signature="e#2227#2228#0" expanded="true" />
+                <element signature="e#2269#2270#0" expanded="true" />
+                <element signature="e#2302#2303#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/DisplayTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="8" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Display.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -240,15 +325,6 @@
                 <element signature="e#15205#15206#0" expanded="true" />
                 <element signature="e#15268#15269#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vavr/vavr/0.9.2/6f541fd0ff058edbce64a5122d29a0a9136fc6b5/vavr-0.9.2-sources.jar!/io/vavr/collection/Iterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -619,6 +695,9 @@
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/playground/Playground.java" />
+        <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" />
+        <option value="$PROJECT_DIR$/src/test/java/snake/winter/game/DisplayTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/snake/winter/game/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -771,7 +850,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545547862692" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545559707142" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/checkstyle/checkstyle.xml" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -970,7 +1049,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545542627327</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add unit tests for Point and Snake">
+      <created>1545548223255</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545548223255</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1051,7 +1137,8 @@
     <MESSAGE value="Add point class and tests" />
     <MESSAGE value="Implement Snake class" />
     <MESSAGE value="Add methods to Point and Snake classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add methods to Point and Snake classes" />
+    <MESSAGE value="Add unit tests for Point and Snake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for Point and Snake" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1262,7 +1349,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="-467">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#1364#1365#0" expanded="true" />
@@ -1276,6 +1363,83 @@
             <element signature="e#2664#2665#0" expanded="true" />
             <element signature="e#2702#2703#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1557#1558#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#1974#1975#0" expanded="true" />
+            <element signature="e#2054#2055#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/DisplayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/snake/winter/game/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
