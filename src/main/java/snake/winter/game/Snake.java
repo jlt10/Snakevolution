@@ -83,6 +83,10 @@ public class Snake {
     return new Snake(head, tail.append(tail.get(tail.length() - 1)), d).step(d);
   }
 
+  public boolean contains(Point p) {
+    return toList().contains(p);
+  }
+
   public List<Point> toList() {
     return tail.insert(0, head);
   }
