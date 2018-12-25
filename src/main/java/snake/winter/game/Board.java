@@ -165,7 +165,6 @@ public class Board {
     return updateBoard(new Random(seed), dirs);
   }
 
-
   public Board updateBoard(Random rng, Direction... dirs) {
     return List.of(dirs).foldLeft(this, (board, d) -> board.updateBoard(d, rng));
   }
