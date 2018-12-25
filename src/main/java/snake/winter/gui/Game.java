@@ -179,20 +179,25 @@ public class Game extends JPanel implements ActionListener {
   }
 
   private class SnakeAdapter extends KeyAdapter {
+
+    private Direction currentSnakeDir() {
+      return currentBoard.getSnake().getDir();
+    }
+
     @Override
     public void keyPressed(KeyEvent e) {
       int key = e.getKeyCode();
 
-      if (key == KeyEvent.VK_LEFT && !currentDir.equals(EAST)) {
+      if (key == KeyEvent.VK_LEFT && !currentSnakeDir().equals(EAST)) {
         currentDir = WEST;
       }
-      else if (key == KeyEvent.VK_RIGHT && !currentDir.equals(WEST)) {
+      else if (key == KeyEvent.VK_RIGHT && !currentSnakeDir().equals(WEST)) {
         currentDir = EAST;
       }
-      else if (key == KeyEvent.VK_UP && !currentDir.equals(SOUTH)) {
+      else if (key == KeyEvent.VK_UP && !currentSnakeDir().equals(SOUTH)) {
         currentDir = NORTH;
       }
-      else if (key == KeyEvent.VK_DOWN && !currentDir.equals(NORTH)) {
+      else if (key == KeyEvent.VK_DOWN && !currentSnakeDir().equals(NORTH)) {
         currentDir = SOUTH;
       }
       else if (key == KeyEvent.VK_SPACE && !timer.isRunning()) {

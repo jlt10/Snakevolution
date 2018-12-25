@@ -32,7 +32,7 @@ public class Snake {
     return dir;
   }
 
-  public Integer getLength() {
+  public int length() {
     return 1 + tail.length();
   }
 
