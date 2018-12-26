@@ -181,7 +181,7 @@ public class Game extends JPanel implements ActionListener {
   private class SnakeAdapter extends KeyAdapter {
 
     private Direction currentSnakeDir() {
-      return currentBoard.getSnake().getDir();
+      return currentBoard.snakeDir();
     }
 
     @Override

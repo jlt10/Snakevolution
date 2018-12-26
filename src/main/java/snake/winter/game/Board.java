@@ -52,6 +52,10 @@ public class Board {
     return live;
   }
 
+  public Direction snakeDir() {
+    return snake.getDir();
+  }
+
   public Board incrementScore() {
     return new Board(height, width, food, snake, score + 1, moves, live);
   }
