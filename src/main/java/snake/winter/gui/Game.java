@@ -1,5 +1,6 @@
 package snake.winter.gui;
 
+import snake.winter.evolution.Brain;
 import snake.winter.game.Board;
 import snake.winter.game.Point;
 import snake.winter.game.Point.Direction;

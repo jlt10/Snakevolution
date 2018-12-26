@@ -20,7 +20,7 @@ public class Point {
 
     private final Point dir;
 
-    public Point getDir() {
+    public Point asPoint() {
       return dir;
     }
 
@@ -32,7 +32,7 @@ public class Point {
      * Returns the complement of the input direction.
      */
     public static Direction complement(Direction d) {
-      return fromPoint(d.getDir().mult(-1)).getOrElseThrow(
+      return fromPoint(d.asPoint().mult(-1)).getOrElseThrow(
           () -> {
             throw new RuntimeException("invalid input direction");
           });
@@ -77,7 +77,7 @@ public class Point {
   }
 
   public Point add(Direction d) {
-    return add(d.getDir());
+    return add(d.asPoint());
   }
 
   public Point mult(int c) {

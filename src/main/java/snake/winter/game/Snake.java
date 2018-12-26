@@ -41,7 +41,7 @@ public class Snake {
    */
   public static Snake snake(Point head, int length, Direction dir) {
     List<Point> tail = List.range(1, length).take(length)
-                           .map(i -> head.add(complement(dir).getDir().mult(i)));
+                           .map(i -> head.add(complement(dir).asPoint().mult(i)));
     return new Snake(head, tail, dir);
   }
 
