@@ -115,7 +115,7 @@ public class GameArtist {
   }
 
   public void drawTextInCenter(String text, int size, int y, Graphics g) {
-    Font small = new Font("Helvetica", Font.BOLD, size);
+    Font small = new Font("Helvetica", Font.BOLD, Math.max(12, size));
     FontMetrics metr = g.getFontMetrics(small);
 
     g.setColor(Color.white);
