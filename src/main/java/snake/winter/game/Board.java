@@ -14,8 +14,8 @@ import static snake.winter.game.Snake.snake;
 public class Board {
   private static final Random defaultRandom = new Random();
 
-  private final int height;
-  private final int width;
+  public final int height;
+  public final int width;
   private final Point food;
   private final Snake snake;
   private final int score;

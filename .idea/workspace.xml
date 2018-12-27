@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0763fb46-57ba-4953-8e95-7d75af4ef2e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/evolution/Brain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/snake/winter/gui/GameArtist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -93,7 +92,7 @@
           <entry key="gradle" value="4" />
           <entry key="html" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="60" />
+          <entry key="java" value="61" />
           <entry key="md" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -103,7 +102,7 @@
           <entry key="Groovy" value="4" />
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="61" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="2" />
@@ -113,18 +112,18 @@
         <counts>
           <entry key="gitignore" value="97" />
           <entry key="gradle" value="461" />
-          <entry key="java" value="28915" />
+          <entry key="java" value="32552" />
           <entry key="md" value="2" />
-          <entry key="txt" value="439" />
+          <entry key="txt" value="505" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="461" />
-          <entry key="JAVA" value="28915" />
+          <entry key="JAVA" value="32552" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="536" />
+          <entry key="PLAIN_TEXT" value="602" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -147,12 +146,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="176" column="46" lean-forward="true" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
+            <state relative-caret-position="30">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/gui/GameArtist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5038#5039#0" expanded="true" />
-                <element signature="e#5114#5115#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#902#903#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1633#1634#0" expanded="true" />
+                <element signature="e#1733#1734#0" expanded="true" />
+                <element signature="e#1754#1755#0" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1772#1773#0" expanded="true" />
+                <element signature="e#1842#1843#0" expanded="true" />
+                <element signature="e#1865#1866#0" expanded="true" />
+                <element signature="e#1685#1686#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#2683#2684#0" expanded="true" />
+                <element signature="e#2733#2734#0" expanded="true" />
+                <element signature="e#2806#2807#0" expanded="true" />
+                <element signature="e#2856#2857#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="-405">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -628,11 +652,12 @@
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/gui/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/test/java/snake/winter/game/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/neuralnet/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/evolution/Brain.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Snake.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java" />
+        <option value="$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/snake/winter/gui/GameArtist.java" />
         <option value="$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java" />
       </list>
     </option>
@@ -796,7 +821,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545865268058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545871615584" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/checkstyle/checkstyle.xml" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1027,7 +1052,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545812983608</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implemented Brain class sans NN">
+      <created>1545865487631</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545865487631</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1075,7 +1107,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3554656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3554656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1084,7 +1116,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32851985" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31316727" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31316727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39891696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1126,7 +1158,8 @@
     <MESSAGE value="Create GUI for Snake game" />
     <MESSAGE value="Add classes for Node and Connection, add Board unit tests" />
     <MESSAGE value="Minor tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor tweaks" />
+    <MESSAGE value="Implemented Brain class sans NN" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Brain class sans NN" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1400,16 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1427,15 +1450,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="176" column="46" lean-forward="true" selection-start-line="176" selection-start-column="46" selection-end-line="176" selection-end-column="46" />
+        <state relative-caret-position="-405">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5038#5039#0" expanded="true" />
-            <element signature="e#5114#5115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/gui/GameArtist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1842#1843#0" expanded="true" />
+            <element signature="e#1865#1866#0" expanded="true" />
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#2683#2684#0" expanded="true" />
+            <element signature="e#2733#2734#0" expanded="true" />
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2856#2857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/snake/winter/gui/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>

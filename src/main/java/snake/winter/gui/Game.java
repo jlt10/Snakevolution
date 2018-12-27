@@ -1,10 +1,7 @@
 package snake.winter.gui;
 
-import snake.winter.evolution.Brain;
 import snake.winter.game.Board;
-import snake.winter.game.Point;
 import snake.winter.game.Point.Direction;
-import snake.winter.game.Snake;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +23,7 @@ public class Game extends JPanel implements ActionListener {
   private final int b_width;
   private final Timer timer;
   private final Random rng;
+  private final GameArtist artist;
 
   public Game(int b_height, int b_width) {
     this(b_height, b_width, new Random());
@@ -41,6 +39,8 @@ public class Game extends JPanel implements ActionListener {
 
     this.timer = new Timer(DELAY, this);
     this.rng = rng;
+    this.artist = new GameArtist(BUFFER, BUFFER, b_height, b_width,
+        5, BOX_SIZE, Color.BLACK);
 
     initGame();
     repaint();
@@ -53,6 +53,8 @@ public class Game extends JPanel implements ActionListener {
     timer.addActionListener(this);
     this.timer = timer;
     this.rng = rng;
+    this.artist = new GameArtist(BUFFER, BUFFER, b_height, b_width,
+        5, BOX_SIZE, Color.BLACK);
 
     initGame();
     repaint();
@@ -71,9 +73,12 @@ public class Game extends JPanel implements ActionListener {
     setBackground(Color.BLACK);
     setFocusable(true);
 
+//    setPreferredSize(new Dimension(
+//        b_width * BOX_SIZE + 2 * BUFFER + SIDE_PANEL,
+//        b_height * BOX_SIZE + 2 * BUFFER));
     setPreferredSize(new Dimension(
-        b_width * BOX_SIZE + 2 * BUFFER + SIDE_PANEL,
-        b_height * BOX_SIZE + 2 * BUFFER));
+        artist.pixelWidth() + 2 * BUFFER + SIDE_PANEL,
+        artist.pixelHeight() + 2 * BUFFER));
   }
 
   public void startNewGame() {
@@ -93,66 +98,31 @@ public class Game extends JPanel implements ActionListener {
     else {
       drawScoreAndMoves(g);
       if (currentBoard.isLive()) {
-        drawBoard(g);
+        artist.drawBoard(currentBoard, g);
+//        drawBoard(g);
       }
       else {
         gameOver(g);
       }
     }
 
-    Graphics2D g2 = (Graphics2D) g;
-    g2.setStroke(new BasicStroke(5));
-    g2.setColor(Color.WHITE);
-    g2.drawRect(BUFFER - 5, BUFFER - 5,
-        b_width * BOX_SIZE + 10, b_height * BOX_SIZE + 10);
-  }
-
-  private void drawBoard(Graphics g) {
-    Point food = currentBoard.getFood();
-    Snake snake = currentBoard.getSnake();
-
-    drawCircleInGame(food, Color.RED, g);
-    drawSquareInGame(snake.getHead(), Color.BLUE, g);
-    snake.getTail().forEach(p -> drawSquareInGame(p, Color.GREEN, g));
-
-    Toolkit.getDefaultToolkit().sync();
-  }
-
-  private void drawCircleInGame(Point p, Color color, Graphics g) {
-    g.setColor(color);
-    g.fillOval(p.x * BOX_SIZE + BUFFER, p.y * BOX_SIZE + BUFFER, BOX_SIZE, BOX_SIZE);
-  }
-
-  private void drawSquareInGame(Point p, Color color, Graphics g) {
-    g.setColor(color);
-    g.fillRect(p.x * BOX_SIZE + BUFFER, p.y * BOX_SIZE + BUFFER, BOX_SIZE, BOX_SIZE);
-
-    g.setColor(Color.BLACK);
-    g.drawRect(p.x * BOX_SIZE + BUFFER, p.y * BOX_SIZE + BUFFER, BOX_SIZE, BOX_SIZE);
-
+    artist.drawFrame(g);
   }
 
   private void startScreen(Graphics g) {
     int size = BOX_SIZE + 4;
-    drawTextInGame("Snakevolution!",size, b_height * BOX_SIZE / 2 + BUFFER - size / 2, g);
-    drawTextInGame("SPACE to start", BOX_SIZE, b_height * BOX_SIZE / 2 + BUFFER + size / 2, g);
+
+    artist.drawTextInCenter("Snakevolution!",size, artist.pixelHeight() / 2 - size / 2, g);
+    artist.drawTextInCenter("SPACE to start", BOX_SIZE, artist.pixelHeight() / 2 + size / 2, g);
   }
 
   private void gameOver(Graphics g) {
     int size = BOX_SIZE + 4;
-    drawTextInGame("Game Over", size, b_height * BOX_SIZE / 2 + BUFFER - size / 2, g);
-    drawTextInGame("SPACE to try again",BOX_SIZE, b_height * BOX_SIZE / 2 + BUFFER + size / 2, g);
+
+    artist.drawTextInCenter("Game Over",size, artist.pixelHeight() / 2 - size / 2, g);
+    artist.drawTextInCenter("SPACE to try again", BOX_SIZE, artist.pixelHeight() / 2 + size / 2, g);
     drawScoreAndMoves(g);
     timer.stop();
-  }
-
-  private void drawTextInGame(String text, int size, int y, Graphics g) {
-    Font small = new Font("Helvetica", Font.BOLD, size);
-    FontMetrics metr = getFontMetrics(small);
-
-    g.setColor(Color.white);
-    g.setFont(small);
-    g.drawString(text, (b_width * BOX_SIZE - metr.stringWidth(text) ) / 2 + BUFFER, y);
   }
 
   private void drawScoreAndMoves(Graphics g) {
