@@ -10,7 +10,7 @@ public class MainFrame extends JFrame {
   }
 
   private void initFrame() {
-    add(new Simulation(25, 25, 10));
+    add(new Simulation(30, 30, 15));
 //    add(new Game(25, 25));
 
     setResizable(false);

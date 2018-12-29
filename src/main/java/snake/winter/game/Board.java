@@ -181,7 +181,7 @@ public class Board {
                                    .map(x -> {
                                      Point p = point(x,y);
                                      if (snake.contains(p)) {
-                                       return (snake.getHead().equals(p)) ? "H" : "X";
+                                       return snake.getHead().equals(p) ? "H" : "X";
                                      }
                                      else if (food.equals(p)) {
                                        return "O";

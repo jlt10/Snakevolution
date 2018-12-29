@@ -3,7 +3,6 @@ package snake.winter.gui;
 import io.vavr.Lazy;
 import io.vavr.collection.HashSet;
 import io.vavr.collection.List;
-import io.vavr.collection.Set;
 import snake.winter.game.Board;
 import snake.winter.game.Snake;
 import snake.winter.game.Point;

@@ -95,14 +95,10 @@ public class Simulation extends JPanel implements ActionListener {
       startScreen(g);
     }
     else {
-//      drawScoreAndMoves(g);
       if (!simulationLive()) {
         gameOver(g);
 
       }
-//      else {
-//        gameOver(g);
-//      }
       artist.drawBoards(currentBoards, g);
     }
 
@@ -117,19 +113,8 @@ public class Simulation extends JPanel implements ActionListener {
   }
 
   private void gameOver(Graphics g) {
-//    int size = BOX_SIZE + 4;
-//
-//    artist.drawTextInCenter("Game Over",size, artist.pixelHeight() / 2 - size / 2, g);
-//    artist.drawTextInCenter("SPACE to try again", BOX_SIZE, artist.pixelHeight() / 2 + size / 2, g);
-//    drawScoreAndMoves(g);
     timer.stop();
   }
-
-//  private void drawScoreAndMoves(Graphics g) {
-//    int size = BOX_SIZE + 4;
-//    drawTextInSidePanel("Score: " + getScore(), size,(b_height * BOX_SIZE + 2 * BUFFER) / 2 - size / 2, g);
-//    drawTextInSidePanel("Moves: " + getMoves(), size,(b_height * BOX_SIZE + 2 * BUFFER) / 2 + size / 2, g);
-//  }
 
   private void drawTextInSidePanel(String text, int size, int y, Graphics g) {
     Font small = new Font("Helvetica", Font.BOLD, size);

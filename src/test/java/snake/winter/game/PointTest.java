@@ -29,10 +29,10 @@ public class PointTest {
 
   @Test
   public void directionTests() {
-    assertEquals(point(0, -1), NORTH.getDir());
-    assertEquals(point(0, 1), SOUTH.getDir());
-    assertEquals(point(-1, 0), WEST.getDir());
-    assertEquals(point(1, 0), EAST.getDir());
+    assertEquals(point(0, -1), NORTH.asPoint());
+    assertEquals(point(0, 1), SOUTH.asPoint());
+    assertEquals(point(-1, 0), WEST.asPoint());
+    assertEquals(point(1, 0), EAST.asPoint());
 
     qt().forAll(points()).checkAssert(
         p -> {

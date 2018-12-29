@@ -11,10 +11,6 @@ buildscript {
         maven {
             url "https://oss.sonatype.org/content/repositories/snapshots/"
         }
-
-        maven {
-            url "https://jitpack.io"
-        }
     }
 
     configurations.maybeCreate("pitest")
@@ -108,21 +104,15 @@ tasks.compileJava.dependsOn printStuff
 
 ////////////////////////////////////////////////////////////////////////////////
 // This section configures "pitest", a fancy "mutation analysis" engine
-// that changes your program hundreds of different ways, under the theory that
-// a "good" unit test will fail if your program has a bug in it. http://pitest.org/
 
 pitest {
-    // We're on the cutting edge here of integrating junit5 with pitest; the plugin we're using
-    // only came out in December 2017, so there may be issues. https://github.com/hcoles/pitest/issues/284
     testPlugin = 'junit5'
 
-//    // here, we're just focusing on the JSON classes; running pitest on the whole codebase takes forever
 //    targetClasses = ['edu.rice.json.*']
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// This section configures JaCoCo (Java Code Coverage). For some assignments, we'll have minimum code
-// coverage requirements. JaCoCo can enforce this as part of 'gradle check'.
+// This section configures JaCoCo (Java Code Coverage).
 
 jacocoTestReport {
     reports {
@@ -150,6 +140,10 @@ test {
 // program and where to find them.
 repositories {
     mavenCentral()
+
+    maven {
+        url "https://jitpack.io"
+    }
 }
 
 configurations {
@@ -159,8 +153,6 @@ configurations {
 dependencies {
     // What i'm used to
     errorprone 'com.google.errorprone:error_prone_core:2.3.2'
-
-    compile 'com.github.jitpack:gradle-simple:1.0.5'
 
     compile('com.sparkjava:spark-core:2.7.2') { // web servers
         exclude module: 'slf4j-simple' // because we're using logback instead
@@ -191,6 +183,4 @@ dependencies {
     // JUnit5 support
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
-
-    implementation 'com.github.JRSteeves:neat-java:12e4115e8b'
 }

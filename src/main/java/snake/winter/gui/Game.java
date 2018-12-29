@@ -73,9 +73,6 @@ public class Game extends JPanel implements ActionListener {
     setBackground(Color.BLACK);
     setFocusable(true);
 
-//    setPreferredSize(new Dimension(
-//        b_width * BOX_SIZE + 2 * BUFFER + SIDE_PANEL,
-//        b_height * BOX_SIZE + 2 * BUFFER));
     setPreferredSize(new Dimension(
         artist.pixelWidth() + 2 * BUFFER + SIDE_PANEL,
         artist.pixelHeight() + 2 * BUFFER));
@@ -99,7 +96,6 @@ public class Game extends JPanel implements ActionListener {
       drawScoreAndMoves(g);
       if (currentBoard.isLive()) {
         artist.drawBoard(currentBoard, g);
-//        drawBoard(g);
       }
       else {
         gameOver(g);

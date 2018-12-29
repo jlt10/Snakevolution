@@ -34,14 +34,14 @@ public class Brain {
 
   private Direction nextMoveHelper(Snake s, List<Double> outputs) {
     switch (outputs.indexOf(outputs.max().get())) {
-      case 0:
+      case 0: // go straight
         return s.getDir();
-      case 1:
+      case 1: // turn left
         return transformDir(s.getDir(), (a, b) -> point(b, -1 * a));
-      case 2:
+      case 2: // turn right
         return transformDir(s.getDir(), (a, b) -> point(-1 * b, a));
       default:
-        throw new RuntimeException("invalid output list");
+        throw new RuntimeException("invalid outputs");
     }
   }
 
